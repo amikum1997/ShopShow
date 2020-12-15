@@ -6,9 +6,6 @@ const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 const PORT = process.env.PORT || 4000
 
-app.get('/', (req, res) => {
-    res.render('home');
-})
 
 //Assets Setup
 app.use(express.static('public'))
@@ -16,6 +13,10 @@ app.use(express.static('public'))
 app.use(expressLayout);
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+    res.render('home');
+})
 
 // Listen Tlo PORT
 app.listen(PORT, () => {

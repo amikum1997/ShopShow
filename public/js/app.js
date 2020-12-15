@@ -93,7 +93,32 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('Hello');
+var showMenu = function showMenu(toggleId, navId) {
+  var toggle = document.getElementById(toggleId),
+      nav = document.getElementById(navId);
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('show');
+    });
+  }
+};
+
+showMenu('nav-toggle', 'nav-menu');
+var navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+  navLink.forEach(function (n) {
+    return n.classList.remove('active');
+  });
+  this.classList.add('active');
+  var navMenu = document.getElementById('nav-menu');
+  navMenu.classList.remove('show');
+}
+
+navLink.forEach(function (n) {
+  return n.addEventListener('click', linkAction);
+});
 
 /***/ }),
 
