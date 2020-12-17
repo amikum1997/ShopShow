@@ -17,7 +17,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('home');
 })
-
+app.get('/cart', (req, res) => {
+    res.render('customers/cart');
+})
 // Listen Tlo PORT
 app.listen(PORT, () => {
     console.log(`Listening To Port ${PORT}`)
