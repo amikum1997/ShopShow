@@ -167,6 +167,7 @@ img {
 .home__container {
   height: calc(100vh - var(--header-height));
 }
+
 .home__data {
   padding-top: 6rem;
 }
@@ -202,7 +203,6 @@ img {
 .collection__container {
   row-gap: 2rem;
 }
-
 .collection__box {
   display: flex;
   justify-content: space-between;
@@ -411,6 +411,7 @@ img {
   .home__container {
     height: 100vh;
   }
+
   .home__data {
     padding: 0;
     height: max-content;
